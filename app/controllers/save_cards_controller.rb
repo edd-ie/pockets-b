@@ -36,7 +36,7 @@ class SaveCardsController < ApplicationController
     end
 
     def valid_params
-        params.permit(::id, :goalName, :amount, :saving_id, :card_id)
+        params.permit(:id, :goalName, :amount, :saving_id, :card_id)
     end
 
 
