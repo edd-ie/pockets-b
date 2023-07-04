@@ -1,0 +1,2 @@
+class SaveSim < ApplicationRecord
+end

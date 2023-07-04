@@ -1,0 +1,2 @@
+class CardTransaction < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class SaveCardsController < ApplicationController
+end

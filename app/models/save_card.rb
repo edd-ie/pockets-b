@@ -1,0 +1,2 @@
+class SaveCard < ApplicationRecord
+end

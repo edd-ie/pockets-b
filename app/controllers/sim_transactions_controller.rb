@@ -1,0 +1,2 @@
+class SimTransactionsController < ApplicationController
+end
