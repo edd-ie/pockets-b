@@ -3,7 +3,7 @@ class CreateSimTransactions < ActiveRecord::Migration[6.1]
     create_table :sim_transactions do |t|
       t.string :category
       t.integer :amount
-      t.integer :card_id
+      t.integer :sim_id
 
       t.timestamps
     end

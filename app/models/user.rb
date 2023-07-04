@@ -4,8 +4,8 @@ class User < ApplicationRecord
     has_many :savings, dependent: :destroy
     has_many :SimTransactions, through: :sims
     has_many :CardTransactions, through: :cards
-    has_many :saveSims, through: :savings, source: :sim
-    has_many :saveCards, through: :savings, source: :card
+    has_many :saveSims, through: :savings
+    has_many :saveCards, through: :savings
     has_secure_password
 
 
