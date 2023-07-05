@@ -16,6 +16,10 @@ Rails.application.routes.draw do
   get "/topCard/:id", to: "users#topCard"
 
   get "/userSims/:id", to: "users#userSim"
+  get "/userCards/:id", to: "users#userCard"
+
+  get "/simUsage/:id", to: "users#simUsage"
+  get "/cardUsage/:id", to: "users#cardUsage"
 
   post "/login", to: "sessions#create"
   # Routing logic: fallback requests for React Router.

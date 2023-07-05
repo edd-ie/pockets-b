@@ -47,4 +47,18 @@ class User < ApplicationRecord
     def userSims
         self.sims
     end
+
+    def userCards
+        self.cardS
+    end
+
+    def simUse
+        self.simTransactions.order(created_at: :desc).map { |record| {id: record.id, category: record.category, amount: record.amount, sim_id: record.sim_id, created_at: record.created_at.strftime("%d/%b")}}
+    end
+
+    def cardUse
+        self.cardTransactions.order(created_at: :desc).map { |record| {id: record.id, category: 
+            record.category, amount: record.amount, card_id: record.card_id, created_at: 
+            record.created_at.strftime("%d/%b")}}
+    end
 end
