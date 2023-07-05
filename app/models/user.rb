@@ -43,4 +43,8 @@ class User < ApplicationRecord
     def topCardAction
         self.cardTransactions.order(amount: :desc).limit(10)
     end
+
+    def userSims
+        self.sims
+    end
 end

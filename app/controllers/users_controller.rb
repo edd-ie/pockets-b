@@ -46,6 +46,12 @@ class UsersController < ApplicationController
         render json: top
     end
 
+    def userSim
+        user = finder
+        sims = user.userSims
+        render json: sims
+    end
+
     private
     def finder
         User.find(params[:id])
