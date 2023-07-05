@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   resources :sims
   resources :users
 
+  get "/simCat/:id", to: "users#simCat"
+  get "/cardCat/:id", to: "users#cardCat"
+  
+  get "/topSim/:id", to: "users#topSim"
+  get "/topCard/:id", to: "users#topCard"
+
   post "/login", to: "sessions#create"
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!

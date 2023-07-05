@@ -17,7 +17,39 @@ class UsersController < ApplicationController
         end
     end
 
+    def show
+        user = finder
+        render json: user
+    end
+
+    def simCat
+        user = finder
+        ranks = user.simData
+        render json: ranks
+    end
+
+    def cardCat
+        user = finder
+        ranks = user.cardData
+        render json: ranks
+    end
+
+    def topSim
+        user = finder
+        top = user.topSimAction
+        render json: top
+    end
+
+    def topCard
+        user = finder
+        top = user.topCardAction
+        render json: top
+    end
+
     private
+    def finder
+        User.find(params[:id])
+    end
 
     def user_params
         params.permit(:username, :email, :password, :password_confirmation, :subscription)
