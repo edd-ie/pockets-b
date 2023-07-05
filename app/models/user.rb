@@ -53,7 +53,7 @@ class User < ApplicationRecord
     end
 
     def simUse
-        self.simTransactions.order(created_at: :desc).map { |record| {id: record.id, category: record.category, amount: record.amount, sim_id: record.sim_id, created_at: record.created_at.strftime("%d/%b")}}
+        self.simTransactions.order(created_at: :desc).limit(10).map { |record| {id: record.id, category: record.category, amount: record.amount, sim_id: record.sim_id, created_at: record.created_at.strftime("%d/%b")}}
     end
 
     def userSimBal
@@ -69,7 +69,7 @@ class User < ApplicationRecord
     end
 
     def cardUse
-        self.cardTransactions.order(created_at: :desc).map { |record| {id: record.id, category: 
+        self.cardTransactions.order(created_at: :desc).limit(10).map { |record| {id: record.id, category: 
             record.category, amount: record.amount, card_id: record.card_id, created_at: 
             record.created_at.strftime("%d/%b")}}
     end
