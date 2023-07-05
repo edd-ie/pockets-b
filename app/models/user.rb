@@ -15,23 +15,23 @@ class User < ApplicationRecord
     validates :subscription, inclusion: {in: ["basic", "premium"]}
 
     def simData
-        categories = ['food', 'clothes', 'electronics', 'household', 'other', 'transport', 'health', 'education', 'entertainment', 'recreation']
-        dataset = Hash.new()
+        categories = ['food', 'clothes', 'electronics', 'household', 'other', 'transport', 'health', 'education', 'entertainment']
+        dataset = []
         categories.each{|x|
             values = 0
             accumulator = self.simTransactions.where(category: x).each{|y| values+=y[:amount]}
-            dataset[x] = values
+            dataset.push({x=>values})
         }
         dataset
     end
     
     def cardData
-        categories = ['food', 'clothes', 'electronics', 'household', 'other', 'transport', 'health', 'education', 'entertainment', 'recreation']
-        dataset = Hash.new()
+        categories = ['food', 'clothes', 'electronics', 'household', 'other', 'transport', 'health', 'education', 'entertainment']
+        dataset = []
         categories.each{|x|
             values = 0
             accumulator = self.cardTransactions.where(category: x).each{|y| values+=y[:amount]}
-            dataset[x] = values
+            dataset.push({x=>values})
         }
         dataset
     end
