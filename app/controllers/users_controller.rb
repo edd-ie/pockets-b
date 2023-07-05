@@ -70,6 +70,18 @@ class UsersController < ApplicationController
         render json: use
     end
 
+    def simBal
+        user = finder
+        balance = user.userSimBal
+        render json: balance
+    end
+
+    def cardBal
+        user = finder
+        balance = user.userCardBal
+        render json: balance
+    end
+
     private
     def finder
         User.find(params[:id])

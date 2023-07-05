@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   get "/simUsage/:id", to: "users#simUsage"
   get "/cardUsage/:id", to: "users#cardUsage"
 
+  get '/uSimBal/:id', to: "users#simBal"
+  get '/uCardBal/:id', to: "users#cardBal"
+
   post "/login", to: "sessions#create"
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!

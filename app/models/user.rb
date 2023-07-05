@@ -56,6 +56,18 @@ class User < ApplicationRecord
         self.simTransactions.order(created_at: :desc).map { |record| {id: record.id, category: record.category, amount: record.amount, sim_id: record.sim_id, created_at: record.created_at.strftime("%d/%b")}}
     end
 
+    def userSimBal
+        balance = 0
+        self.sims.each{|z| balance+=z.balance}
+        [{id:self.id, username: self.username, balance:balance, sub:self.subscription}]
+    end
+
+    def userCardBal
+        balance = 0
+        self.cards.each{|z| balance+=z.balance}
+        [{id:self.id, username: self.username, balance:balance, sub:self.subscription}]
+    end
+
     def cardUse
         self.cardTransactions.order(created_at: :desc).map { |record| {id: record.id, category: 
             record.category, amount: record.amount, card_id: record.card_id, created_at: 
