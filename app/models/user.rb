@@ -49,7 +49,7 @@ class User < ApplicationRecord
     end
 
     def userCards
-        self.cardS
+        self.cards
     end
 
     def simUse
