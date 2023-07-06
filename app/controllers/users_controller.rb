@@ -18,8 +18,12 @@ class UsersController < ApplicationController
     end
 
     def show
-        user = finder
-        render json: user
+        user = User.find_by(id: sessions[:user_id])
+        if user
+            render json: user
+        else
+            render json: {error: "User not logged in"}, status: :unauthorized
+        end
     end
 
     def simCat
