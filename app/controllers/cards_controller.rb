@@ -25,7 +25,7 @@ class CardsController < ApplicationController
 
     def update
         card = finder
-        card.update!(valid_params)
+        card.update(valid_params)
         render json: card, status: :accepted
     end
 
@@ -36,7 +36,7 @@ class CardsController < ApplicationController
     end
 
     def valid_params
-        params.permit(:id, :name, :balance, :user_id)
+        params.permit(:id, :name, :balance, :user_id,:bank)
     end
 
 

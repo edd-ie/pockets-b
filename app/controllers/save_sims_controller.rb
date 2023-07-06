@@ -25,7 +25,7 @@ class SaveSimsController < ApplicationController
 
     def update
         save_sim = finder
-        SaveSim.update!(valid_params)
+        SaveSim.update(valid_params)
         render json: save_sim, status: :accepted
     end
 

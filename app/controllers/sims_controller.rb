@@ -25,7 +25,7 @@ class SimsController < ApplicationController
 
     def update
         sim = finder
-        Sim.update!(valid_params)
+        Sim.update(valid_params)
         render json: sim, status: :accepted
     end
 
@@ -36,7 +36,7 @@ class SimsController < ApplicationController
     end
 
     def valid_params
-        params.permit(:id, :name, :balance, :user_id)
+        params.permit(:id, :name, :balance, :user_id, :simName)
     end
 
 

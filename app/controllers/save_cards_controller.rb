@@ -25,7 +25,7 @@ class SaveCardsController < ApplicationController
 
     def update
         save_card = finder
-        SaveCard.update!(valid_params)
+        SaveCard.update(valid_params)
         render json: save_card, status: :accepted
     end
 

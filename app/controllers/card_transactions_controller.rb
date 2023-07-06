@@ -25,7 +25,7 @@ class CardTransactionsController < ApplicationController
 
     def update
         card_transaction = finder
-        card_transaction.update!(valid_params)
+        card_transaction.update(valid_params)
         render json: card_transaction, status: :accepted
     end
 
