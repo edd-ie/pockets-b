@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     end
 
     def show
-        user = User.find(sessions[:user_id])
+        user = User.find(session[:user_id])
         if user
             render json: user
         else
