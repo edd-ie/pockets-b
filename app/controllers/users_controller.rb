@@ -95,7 +95,7 @@ class UsersController < ApplicationController
     end
 
     def no_records
-        render json: {error: "Sim not found"}, status: :not_found
+        render json: {error: "User not found"}, status: :not_found
     end
 
     def render_unprocessable_entity_response(invalid)
