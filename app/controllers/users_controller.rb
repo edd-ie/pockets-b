@@ -14,6 +14,14 @@ class UsersController < ApplicationController
         render json: user
     end
 
+    def changePass
+        user = User.find_by(email: params[:email])
+        user.update(password: params[:password], 
+            password_confirmation: params[:password]
+        )
+        render json: user
+    end
+
 
     def create
         user = User.create!(user_params)

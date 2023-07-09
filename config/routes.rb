@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :users
   resource :sessions
 
+  patch "/changePass", to: "users#changePass"
+
   get "/simCat/:id", to: "users#simCat"
   get "/cardCat/:id", to: "users#cardCat"
 
