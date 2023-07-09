@@ -1,6 +1,6 @@
 puts "Seeding..."
 
-Savings.destroy_all
+Saving.destroy_all
 
 x = 0
 cards = ['coop', 'equity', 'barclays']
