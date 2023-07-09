@@ -8,6 +8,12 @@ class UsersController < ApplicationController
         render json: users
     end
 
+    def update
+        user = finder
+        user.update(user_params)
+        render json: user
+    end
+
 
     def create
         user = User.create!(user_params)
