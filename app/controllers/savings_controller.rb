@@ -25,7 +25,7 @@ class SavingsController < ApplicationController
 
     def update
         savings = finder
-        Saving.update(valid_params)
+        savings.update(valid_params)
         render json: savings, status: :accepted
     end
 
