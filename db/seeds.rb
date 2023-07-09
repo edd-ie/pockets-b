@@ -35,7 +35,7 @@ categ.each{|y|
 Saving.create!(name: "Shoes", goal: 5000, duration: 12, saved_amount: 0, user_id: 1)
 
 
-SaveSim.create!(goalName: "Shoes", amount: 500, saving_id: 3, sim_id: 1)
-SaveCard.create!(goalName: "Shoes", amount: 500, saving_id: 4, card_id: 1)
+# SaveSim.create!(goalName: "Shoes", amount: 500, saving_id: 3, sim_id: 1)
+# SaveCard.create!(goalName: "Shoes", amount: 500, saving_id: 4, card_id: 1)
 
 puts "...Done!"
