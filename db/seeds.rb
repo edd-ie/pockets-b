@@ -27,7 +27,7 @@ cat.each{|y|
 x = 0
 categ = ['food', 'clothes', 'electronics', 'household', 'other', 'transport', 'health', 'education', 'entertainment', 'recreation']
 categ.each{|y| 
-    CardTransaction.create!(category: y, amount: (100*(x+1)), card_id: 2)
+    CardTransaction.create!(category: y, amount: (100*(x+1)), card_id: 3)
     x += 1
 }
 
