@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_06_091117) do
+ActiveRecord::Schema.define(version: 2023_07_09_105628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2023_07_06_091117) do
 
   create_table "save_cards", force: :cascade do |t|
     t.string "goalName"
-    t.string "amount"
+    t.integer "amount"
     t.integer "saving_id"
     t.integer "card_id"
     t.datetime "created_at", precision: 6, null: false
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2023_07_06_091117) do
 
   create_table "save_sims", force: :cascade do |t|
     t.string "goalName"
-    t.string "amount"
+    t.integer "amount"
     t.integer "saving_id"
     t.integer "sim_id"
     t.datetime "created_at", precision: 6, null: false

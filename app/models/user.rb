@@ -75,10 +75,15 @@ class User < ApplicationRecord
     end
 
     def userSavings
-        self.savings
+        y = self.savings
+        save = []
+        z = y.each{|x| save.push(x.saved)}
+        return save
     end
 
     def cardSavings
         self.saveCards
     end
+
+
 end
