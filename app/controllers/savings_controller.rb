@@ -29,6 +29,18 @@ class SavingsController < ApplicationController
         render json: savings, status: :accepted
     end
 
+    def addCardSave
+        save = finder
+        new_save = save.saveCards.create!({goalName:params[:goalName],amount:params[:amount],saving_id:params[:id],card_id:params[:card_id]})
+        render json: new_save
+    end
+
+    def addSimSave
+        save = finder
+        new_save = save.saveSims.create!({goalName:params[:goalName],amount:params[:amount],saving_id:params[:id],sim_id:params[:sim_id]})
+        render json: new_save
+    end
+    
     private
 
     def finder
@@ -36,7 +48,7 @@ class SavingsController < ApplicationController
     end
 
     def valid_params
-        params.permit(:id, :name, :goal, :duration, :saved_amount, :user_id)
+        params.permit(:id, :name, :goal, :saving_id, :goalName, :sim_id, :card_id,:amount, :duration, :saved_amount, :user_id)
     end
 
 

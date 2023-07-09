@@ -84,6 +84,12 @@ class UsersController < ApplicationController
         render json: balance
     end
 
+    def userSavings
+        user = finder
+        savings = user.userSavings
+        render json: savings
+    end
+
     private
 
     def finder

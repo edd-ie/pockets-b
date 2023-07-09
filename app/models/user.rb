@@ -73,4 +73,12 @@ class User < ApplicationRecord
             record.category, amount: record.amount, card_id: record.card_id, created_at: 
             record.created_at.strftime("%d/%b")}}
     end
+
+    def userSavings
+        self.savings
+    end
+
+    def cardSavings
+        self.saveCards
+    end
 end

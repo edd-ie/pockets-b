@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   get "/simCat/:id", to: "users#simCat"
   get "/cardCat/:id", to: "users#cardCat"
+
+  post '/addSaveCard/:id', to: "savings#addCardSave"
+  post '/addSaveSim/:id', to: "savings#addSimSave"
   
   get "/topSim/:id", to: "users#topSim"
   get "/topCard/:id", to: "users#topCard"
@@ -24,6 +27,8 @@ Rails.application.routes.draw do
 
   get '/uSimBal/:id', to: "users#simBal"
   get '/uCardBal/:id', to: "users#cardBal"
+
+  get '/userSaves/:id', to: "users#userSavings"
 
   post "/login", to: "sessions#create"
   post "/signup", to: "users#create"
