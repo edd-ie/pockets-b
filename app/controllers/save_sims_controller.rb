@@ -14,7 +14,7 @@ class SaveSimsController < ApplicationController
 
     def destroy
         save_sim = finder
-        SaveSim.destroy
+        save_sim.destroy
         head :no_content
     end
 
@@ -25,7 +25,7 @@ class SaveSimsController < ApplicationController
 
     def update
         save_sim = finder
-        SaveSim.update(valid_params)
+        save_sim.update(valid_params)
         render json: save_sim, status: :accepted
     end
 

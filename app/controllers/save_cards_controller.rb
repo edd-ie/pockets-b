@@ -14,7 +14,7 @@ class SaveCardsController < ApplicationController
 
     def destroy
         save_card = finder
-        SaveCard.destroy
+        save_card.destroy
         head :no_content
     end
 
@@ -25,7 +25,7 @@ class SaveCardsController < ApplicationController
 
     def update
         save_card = finder
-        SaveCard.update(valid_params)
+        save_card.update(valid_params)
         render json: save_card, status: :accepted
     end
 

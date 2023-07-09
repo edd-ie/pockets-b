@@ -14,7 +14,7 @@ class SavingsController < ApplicationController
 
     def destroy
         savings = finder
-        Saving.destroy
+        savings.destroy
         head :no_content
     end
 
