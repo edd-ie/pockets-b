@@ -166,6 +166,6 @@ This project was a team effort from the following individuals :
 The project is licensed under the [BSD 3-Clause "New" or "Revised" License](https://github.com/highlightjs/highlight.js/blob/main/LICENSE), thus redistribution and use in source and binary forms are permitted provided that the conditions are met
 
 ## <a id="sources">Resources</a>
-WebPage -> [pockets backend]('https://pockets.onrender.com/')
+WebPage -> [pockets backend](https://pockets.onrender.com/)
 
-Database hosting-> [postgres]('https://dashboard.render.com/')
+Database hosting-> [Postgres](https://dashboard.render.com/)
