@@ -90,24 +90,17 @@ Sim has many:
 ## <a id="Methods">Models</a>
 
 This handles the logic for the data sourcing from the data
+ - User - User logic
 
-### <a id="users">User</a>
-User logic
+ - Card - card Logic
 
-### <a id="card">Card</a>
-Card Logic
+ - Sim - sim Logic
 
-### <a id="sim">Sim</a>
-Sim Logic
+ - Saving - savings logic
 
-### <a id="saving">Saving</a>
-Savings logic
+ - SaveCard - Card savings logic
 
-### <a id="save_cards">Card savings</a>
-Card savings logic
-
-### <a id="save_sims">Sim savings</a>
-Sim saving logic
+ - SaveSim -  Sim saving logic
 
 ## <a id="routes">Routes</a>
 The routes the have full http requests functionality(GET, POST, DELETE, PATCH, PUT)
